@@ -64,7 +64,7 @@ body {
     justify-content: center;
     background: var(--gradient-maroon);
     background-image: url('assets/home.jpg'), var(--gradient-maroon);
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -148,7 +148,7 @@ body {
     justify-content: center;
     background: var(--gradient-maroon);
     background-image: url('assets/home2.jpg'), var(--gradient-maroon);
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
@@ -515,8 +515,8 @@ body {
     width: 100%;
     min-height: 100vh;
     background-image: url('assets/home.jpg');
-    background-size: 100% auto;
-    background-position: center top;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     position: relative;
     display: flex;
@@ -1047,8 +1047,16 @@ body {
     }
 
     .hero-logo {
-        width: 120px;
-        height: 120px;
+        width: 300px;
+        height: 300px;
+        margin-right: 0;
+    }
+
+    .hero-logo-second {
+        width: 400px;
+        height: 400px;
+        margin-left: 0;
+        margin-top: 0;
     }
 
     .hero-title {
@@ -1103,6 +1111,19 @@ body {
 
 /* Large Mobile - 640px and below */
 @media (max-width: 640px) {
+    .hero-logo {
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+    }
+
+    .hero-logo-second {
+        width: 250px;
+        height: 250px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
@@ -1138,6 +1159,19 @@ body {
 
 /* Small Mobile - 480px and below */
 @media (max-width: 480px) {
+    .hero-logo {
+        width: 150px;
+        height: 150px;
+        margin-right: 0;
+    }
+
+    .hero-logo-second {
+        width: 200px;
+        height: 200px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
     .hero-title {
         font-size: 1.75rem;
     }
@@ -1181,11 +1215,51 @@ body {
     }
 }
 
+/* Mobile - 425px and below */
+@media (max-width: 425px) {
+    /* Fix background attachment for mobile */
+    .hero-section {
+        background-attachment: scroll;
+    }
+
+    /* Fix logo size and positioning */
+    .hero-logo {
+        width: 350px;
+        height: 350px;
+        margin-right: 0;
+    }
+
+    .hero-logo-second {
+        width: 530px;
+        height: 530px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    /* Fix new section header */
+    .new-section-header {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    /* Fix cards wrapper */
+    .new-section-cards-wrapper {
+        margin-top: 0;
+        padding: 0 20px;
+        padding-bottom: 40px;
+    }
+}
+
 /* Extra Small Mobile - 375px and below */
 @media (max-width: 375px) {
     .hero-logo {
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-logo-second {
+        width: 150px;
+        height: 150px;
     }
 
     .hero-title {
