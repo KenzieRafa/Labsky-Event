@@ -784,7 +784,7 @@ body {
 
 .detail-program-name {
     font-family: 'New Amsterdam', var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(3.5rem, 7vw, 6rem);
     font-weight: 900;
     color: var(--primary-maroon);
     text-align: center;
@@ -1100,7 +1100,7 @@ body {
 
     /* Detail Page Responsive */
     .detail-program-name {
-        font-size: clamp(2rem, 4vw, 3rem);
+        font-size: clamp(3rem, 6vw, 5rem);
     }
 
     .detail-action-btn {
@@ -1141,7 +1141,7 @@ body {
     }
 
     .detail-program-name {
-        font-size: clamp(1.75rem, 4vw, 2.5rem);
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
     }
 
     /* SKYNOTES Grid - Single column for mobile */
@@ -1207,7 +1207,7 @@ body {
     }
 
     .detail-program-name {
-        font-size: clamp(1.5rem, 5vw, 2rem);
+        font-size: clamp(2.2rem, 6vw, 3rem);
         margin-bottom: 20px;
     }
 
@@ -1299,7 +1299,7 @@ body {
     }
 
     .detail-program-name {
-        font-size: clamp(1.25rem, 5vw, 1.75rem);
+        font-size: clamp(2rem, 6vw, 2.8rem);
     }
 
     .detail-action-btn {
