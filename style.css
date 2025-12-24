@@ -1256,8 +1256,8 @@ body {
     .new-section-logo {
         max-width: 100%;
         width: 100%;
-        transform: scale(2.2);
-        margin-left: 0;
+        transform: scale(2.5);
+        margin-left: 25px;
         margin-top: 80px;
     }
 
