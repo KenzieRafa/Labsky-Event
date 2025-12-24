@@ -1235,7 +1235,9 @@ body {
         margin-left: 110px;
         margin-top: 0;
     }
-
+    .new-card-title {
+        font-size: 2rem;   
+    }
     /* Fix new section header */
     .new-section-header {
         padding-left: 20px;
