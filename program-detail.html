@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Program - Dharmapatha Mahidara</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&family=New+Amsterdam&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Detail Page Section -->
+    <section id="program-detail-section" class="program-detail-section">
+        <!-- Back Button -->
+        <a href="index.html#new-home-section" class="back-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+            Kembali
+        </a>
+
+        <!-- Program Detail Content -->
+        <div class="detail-content">
+            <div class="detail-container">
+                <h1 class="detail-program-name" id="programName">Program Name</h1>
+
+                <!-- Action Buttons -->
+                <div class="detail-buttons" id="actionButtons">
+                    <!-- Buttons will be dynamically inserted by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Running Text Section -->
+    <section id="running-text-detail" class="running-text-section">
+        <div class="running-text-container">
+            <div class="running-text">
+                <span class="text-item">• Welcome to • Dharmapatha Mahidhara • </span>
+                <span class="text-item">• Welcome to • Dharmapatha Mahidhara • </span>
+                <span class="text-item">• Welcome to • Dharmapatha Mahidhara • </span>
+                <span class="text-item">• Welcome to • Dharmapatha Mahidhara • </span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get program name from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const programName = urlParams.get('program');
+        const section = document.getElementById('program-detail-section');
+        const buttonsContainer = document.getElementById('actionButtons');
+
+        if (programName) {
+            // Update page title
+            document.getElementById('programName').textContent = programName.toUpperCase();
+            document.title = programName.toUpperCase() + ' - Dharmapatha Mahidara';
+
+            // Check if it's SKYNOTES - special treatment
+            if (programName.toLowerCase() === 'skynotes') {
+                // Add special class for SKYNOTES background
+                section.classList.add('skynotes-bg');
+
+                // Create 10 buttons for SKYNOTES with specific links
+                const skynotesButtons = [
+                    { text: 'ASESMEN TENGAH SEMESTER 1 X', class: 'btn-ats1', url: 'https://bit.ly/SKYNOTESATSGANJILX' },
+                    { text: 'ASESMEN TENGAH SEMESTER 1 XI', class: 'btn-ats1', url: 'https://bit.ly/SKYNOTESATSGANJILXI' },
+                    { text: 'ASESMEN TENGAH SEMESTER 1 XII', class: 'btn-ats1', url: 'https://bit.ly/SKYNOTESATSGANJILXII' },
+                    { text: 'ASESMEN AKHIR SEMESTER 1 X', class: 'btn-aas1', url: 'https://drive.google.com/drive/folders/1lC0gYQMTJUh7wyeKUefudwWgMFDzZkRU' },
+                    { text: 'ASESMEN AKHIR SEMESTER 1 XI', class: 'btn-aas1', url: 'https://drive.google.com/drive/folders/1kWPneRTUHyAXAeO_EmNcZSTpJvFc5Ibx' },
+                    { text: 'ASESMEN AKHIR SEMESTER 1 XII', class: 'btn-aas1', url: 'https://drive.google.com/drive/folders/1OOszbZbo0-O4PSFhqYMy6_TfS8MJGtpS' },
+                    { text: 'ASESMEN TENGAH SEMESTER 2 X', class: 'btn-ats2', url: 'https://drive.google.com/drive/folders/1pgMlU3pdpcRqQ7LFPVFho5jG9rnFB1sR?usp=share_link' },
+                    { text: 'ASESMEN TENGAH SEMESTER 2 XI-I', class: 'btn-ats2', url: 'https://drive.google.com/drive/folders/1975A4sSgzbmZ9VkcAzuQ0AUQbYm45By2?usp=sharing' },
+                    { text: 'ASESMEN AKHIR SEMESTER 2 X', class: 'btn-aas2', url: 'https://drive.google.com/drive/folders/1s7w2X2jpjSZTs-UU7xJ5xFy2TT_F4d4W?usp=share_link' },
+                    { text: 'ASESMEN AKHIR SEMESTER 2 XI-I', class: 'btn-aas2', url: 'https://drive.google.com/drive/folders/1xlj1FckgwAnOvVcrzfR9Xrs28R2TCSY7?usp=share_link' }
+                ];
+
+                skynotesButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'speakup') {
+                // Special treatment for SPEAKUP
+                const speakupButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/speakup.labsky?igsh=bXR0c2Y2MmEwN2E5' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1LYevC_ifiydRyx7uNx2xpj9LQRqtgeFa' }
+                ];
+
+                speakupButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skywalk') {
+                // Special treatment for SKYWALK
+                const skywalkButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skywalk.2025?igsh=NDVwMjQ4MXF5eW40' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1mBdRw6VzbB1Rvo-aqEOqD6C1ZqunUGbV?usp=sharing' }
+                ];
+
+                skywalkButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skyrun') {
+                // Special treatment for SKYRUN
+                const skyrunButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skyrunid?igsh=MXFiZXc1N29ldXFhZQ==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1_G6XjnuBxtFRGuqq8wi8ITdt8Ve3gxHj?usp=sharing' }
+                ];
+
+                skyrunButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skyreunion') {
+                // Special treatment for SKYREUNION
+                const skyreunionButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skyreunion2025?igsh=ZTB6cGVkbGg0ZGR1' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1eM7eGRdZfB3X_S98gHXiGPDc9sfepZaO?usp=sharing' }
+                ];
+
+                skyreunionButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skysale') {
+                // Special treatment for SKYSALE
+                const skysaleButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skysale25?igsh=MW8xMThkYXQxem15eQ==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1K9zGygqXGX4KwdoJqNLb35U7cHOjNjc4' }
+                ];
+
+                skysaleButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skynation') {
+                // Special treatment for SKYNATION
+                const skynationButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skynation2025?igsh=MTd2cjV5OGExNGZhdQ==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1-bJaKN96atoCW8Uedzd1yz5NhA6KUHpg?usp=sharing' }
+                ];
+
+                skynationButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skymun') {
+                // Special treatment for SKYMUN
+                const skymunButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skymun.2026?igsh=MTk0ZWlzOHd4YXVvdQ==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1jYLnwMNkYyX3a6B89f6n5zkmKDq3jcL9?usp=sharing' }
+                ];
+
+                skymunButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skymedcare') {
+                // Special treatment for SKYMEDCARE
+                const skymedcareButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skyforhumanity?igsh=M20zN3l6cGkyYXdx' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1KK9b2AMt7YzKlYJo8J4CwGnwOjDndjfx' }
+                ];
+
+                skymedcareButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skylite') {
+                // Special treatment for SKYLITE
+                const skyliteButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skylitemusicals?igsh=Y3N3MTI1cWZncGEx' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1DzVplccfxcQV6b8gRG4M_EBj-XYiKG_F?usp=sharing' }
+                ];
+
+                skyliteButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skybattle') {
+                // Special treatment for SKYBATTLE
+                const skybattleButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skybattle2026?igsh=MXNjN3FiaGtvMGljMQ==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1w12jXHBYptmaKQuYTjFW3J3OsFNLRo6C?usp=sharing' }
+                ];
+
+                skybattleButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skyavenue') {
+                // Special treatment for SKYAVENUE
+                const skyavenueButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skyavenue?igsh=MW5waTF4aTd3bWx1MQ==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1lhIwcxYJq9M4PoMQ6W_GROWjxvfXcNp5?usp=sharing' }
+                ];
+
+                skyavenueButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'kok') {
+                // Special treatment for KOK
+                const kokButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/kok.labsky?igsh=MWJieDUyc20zZndrbw==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1EwQ9EljFKNvnuVR0GhEPMxjVIhoaSl7s?usp=sharing' }
+                ];
+
+                kokButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'imf') {
+                // Special treatment for IMF
+                const imfButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/ihbsfest?igsh=anJiM3BxODZxYmNr' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1PJrUyOTqQXsvCuzbHPtXMLlaH6nZtwen?usp=sharing' }
+                ];
+
+                imfButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'bulbas') {
+                // Special treatment for BULBAS
+                const bulbasButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/bulanbahasalabsky?igsh=MThqaXllNTd1eXJvZw==' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1vJExSH2RnCPT8_N7u89QY5wFAjbuRmqo' }
+                ];
+
+                bulbasButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skyleague') {
+                // Special treatment for SKYLEAGUE - Documentation only
+                const skyleagueButtons = [
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/1crf3WpgLeW8DZ3LvSSRprSoVxEiHHDdl' }
+                ];
+
+                skyleagueButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skyfeast') {
+                // Special treatment for SKYFEAST - Documentation only
+                const skyfeastButtons = [
+                    { text: 'DOKUMENTASI', class: 'btn-documentation', url: 'https://drive.google.com/drive/folders/14-Uy7rUIinZGM9IMfCRL53_hObCBWqTH' }
+                ];
+
+                skyfeastButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'skyblood') {
+                // Special treatment for SKYBLOOD - Instagram only
+                const skybloodButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/skyforhumanity?igsh=M20zN3l6cGkyYXdx' }
+                ];
+
+                skybloodButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else if (programName.toLowerCase() === 'labskystories') {
+                // Special treatment for LABSKYSTORIES - Instagram only
+                const labskystoriesButtons = [
+                    { text: 'INSTAGRAM', class: 'btn-instagram', url: 'https://www.instagram.com/labskystories?igsh=MWxjbDJwdnlrcDhraA==' }
+                ];
+
+                labskystoriesButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = btn.url;
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            } else {
+                // Default buttons for other programs
+                const defaultButtons = [
+                    { text: 'LINK PENDAFTARAN', class: 'btn-registration' },
+                    { text: 'DOKUMENTASI', class: 'btn-documentation' }
+                ];
+
+                defaultButtons.forEach(btn => {
+                    const link = document.createElement('a');
+                    link.href = 'https://drive.google.com/drive/u/0/folders/1p9z7rBlk__A9cVC27SRyyCV3nU8u4kEn';
+                    link.target = '_blank';
+                    link.className = `detail-action-btn ${btn.class}`;
+                    link.textContent = btn.text;
+                    buttonsContainer.appendChild(link);
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

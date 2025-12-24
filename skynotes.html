@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYNOTES - Portal Layanan Akademik</title>
+    <meta name="description"
+        content="SKYNOTES - Portal layanan akademik digital Dharmapatha Mahidara untuk akses materi asesmen">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skynotes-style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="skynotes-nav">
+        <div class="nav-container">
+            <a href="index.html" class="back-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                <span>Kembali ke Beranda</span>
+            </a>
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="Logo Dharmapatha Mahidara">
+            </div>
+        </div>
+    </nav>
+
+    <!-- SKYNOTES Hero Section -->
+    <section class="skynotes-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content-skynotes">
+            <div class="skynotes-badge">📝</div>
+            <h1 class="skynotes-title">SKYNOTES</h1>
+            <p class="skynotes-subtitle">Portal Layanan Akademik Digital</p>
+            <p class="skynotes-description">Akses materi pembelajaran dan asesmen dengan mudah</p>
+        </div>
+    </section>
+
+    <!-- Assessment Section -->
+    <section class="assessment-section">
+        <div class="assessment-container">
+            <div class="section-intro">
+                <h2>Pilih Periode Asesmen</h2>
+                <p>Akses materi dan soal asesmen sesuai dengan periode akademik</p>
+            </div>
+
+            <div class="assessment-grid">
+                <!-- Semester 1 -->
+                <div class="semester-group">
+                    <div class="semester-header">
+                        <h3>Semester 1</h3>
+                        <span class="semester-badge">Sep - Des</span>
+                    </div>
+
+                    <div class="assessment-buttons">
+                        <a href="#" class="assessment-btn" data-assessment="ats1">
+                            <div class="btn-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
+                                </svg>
+                            </div>
+                            <div class="btn-content">
+                                <h4>Asesmen Tengah Semester 1</h4>
+                                <p>Materi UTS Periode September - Oktober</p>
+                            </div>
+                            <div class="btn-arrow">→</div>
+                        </a>
+
+                        <a href="#" class="assessment-btn" data-assessment="aas1">
+                            <div class="btn-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
+                                </svg>
+                            </div>
+                            <div class="btn-content">
+                                <h4>Asesmen Akhir Semester 1</h4>
+                                <p>Materi UAS Periode November - Desember</p>
+                            </div>
+                            <div class="btn-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Semester 2 -->
+                <div class="semester-group">
+                    <div class="semester-header">
+                        <h3>Semester 2</h3>
+                        <span class="semester-badge">Feb - Jun</span>
+                    </div>
+
+                    <div class="assessment-buttons">
+                        <a href="#" class="assessment-btn" data-assessment="ats2">
+                            <div class="btn-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
+                                </svg>
+                            </div>
+                            <div class="btn-content">
+                                <h4>Asesmen Tengah Semester 2</h4>
+                                <p>Materi UTS Periode Februari - Maret</p>
+                            </div>
+                            <div class="btn-arrow">→</div>
+                        </a>
+
+                        <a href="#" class="assessment-btn" data-assessment="aas2">
+                            <div class="btn-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                    <polyline points="14 2 14 8 20 8" />
+                                    <line x1="16" y1="13" x2="8" y2="13" />
+                                    <line x1="16" y1="17" x2="8" y2="17" />
+                                    <polyline points="10 9 9 9 8 9" />
+                                </svg>
+                            </div>
+                            <div class="btn-content">
+                                <h4>Asesmen Akhir Semester 2</h4>
+                                <p>Materi UAS Periode Mei - Juni</p>
+                            </div>
+                            <div class="btn-arrow">→</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info Notice -->
+            <div class="info-notice">
+                <div class="notice-icon">ℹ️</div>
+                <div class="notice-content">
+                    <h4>Informasi Penting</h4>
+                    <ul>
+                        <li>Materi asesmen dapat diakses sesuai dengan periode yang telah ditentukan</li>
+                        <li>Pastikan Anda login terlebih dahulu untuk mengakses materi lengkap</li>
+                        <li>Untuk bantuan lebih lanjut, hubungi admin SKYNOTES</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="features-container">
+            <h2>Fitur SKYNOTES</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>Bank Soal</h3>
+                    <p>Akses ribuan soal latihan dari berbagai mata kuliah</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3>Materi Lengkap</h3>
+                    <p>Rangkuman materi dari dosen dan kakak tingkat</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💡</div>
+                    <h3>Pembahasan Detail</h3>
+                    <p>Solusi lengkap dengan penjelasan step-by-step</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Akses Mudah</h3>
+                    <p>Available 24/7 dari mana saja, kapan saja</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Dharmapatha Mahidara. All Rights Reserved.</p>
+            <p class="footer-tagline">Membangun Generasi Unggul dan Berkarakter</p>
+        </div>
+    </footer>
+
+    <script src="skynotes-script.js"></script>
+</body>
+
+</html>
