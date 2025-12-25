@@ -1055,16 +1055,16 @@ body {
     }
 
     .hero-logo {
-        width: 300px;
-        height: 300px;
-        margin-right: 0;
+        width: 600px;
+        height: 600px;
+        margin-right: 50px;
     }
 
     .hero-logo-second {
-        width: 400px;
-        height: 400px;
-        margin-left: 0;
-        margin-top: 0;
+        width: 900px;
+        height: 900px;
+        margin-left: 170px;
+        margin-top: 150px;
     }
 
     .hero-title {
@@ -1101,6 +1101,34 @@ body {
     /* Detail Page Responsive */
     .detail-program-name {
         font-size: clamp(3rem, 6vw, 5rem);
+    }
+
+    /* Program Kerja Kami section header for Tablet */
+    .new-section-header {
+        margin-top: -100px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+    }
+
+    /* Program Kerja Kami logo for Tablet */
+    .new-section-logo {
+        width: 100%;
+        transform: scale(1.8);
+        margin-top: 150px;
+        margin-left: 34px;
+        margin-bottom: 150px;
+    }
+
+    /* Cards section for Tablet */
+    .new-section-cards-wrapper {
+              /* ← Jarak dari logo ke cards */
+        padding: 0 40px;         /* ← Padding kiri-kanan */
+        padding-bottom: 40px;
+    }
+
+    .new-card {
+        min-width: 280px;        /* ← Lebar card */
+        height: 380px;           /* ← Tinggi card */
     }
 
     .detail-action-btn {
