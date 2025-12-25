@@ -194,7 +194,7 @@ body {
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
     transition: var(--transition-smooth);
     margin-right: 20px;
-    margin-top: 250px;
+    margin-top: 75px;
 }
 
 .hero-logo-second:hover {
