@@ -812,6 +812,33 @@ body {
     flex-wrap: wrap;
 }
 
+/* SKYNOTES specific grid layout for Desktop & Tablet (above 640px) */
+.program-detail-section.skynotes-bg .detail-buttons {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 15px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Smaller font for SKYNOTES buttons on Desktop */
+.program-detail-section.skynotes-bg .detail-action-btn {
+    font-size: 0.85rem;
+    padding: 12px 20px;
+}
+
+/* Force white buttons (ASESMEN AKHIR SEMESTER 2) to start on row 4 */
+.program-detail-section.skynotes-bg .detail-action-btn:nth-child(9) {
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.program-detail-section.skynotes-bg .detail-action-btn:nth-child(10) {
+    grid-column: 2;
+    grid-row: 4;
+}
+
 .detail-action-btn {
     display: inline-flex;
     align-items: center;
@@ -1048,6 +1075,36 @@ body {
     }
 }
 
+/* Large Desktop - 1440px and above */
+@media (min-width: 1440px) {
+    .program-detail-section.skynotes-bg .detail-action-btn {
+        font-size: 1.2rem;
+        padding: 18px 40px;
+        min-width: 360px;
+    }
+
+    /* Wider max-width and gap for larger buttons */
+    .program-detail-section.skynotes-bg .detail-buttons {
+        max-width: 1200px;
+        gap: 20px;
+    }
+}
+
+/* Desktop - 1024px and above */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .program-detail-section.skynotes-bg .detail-action-btn {
+        font-size: 1rem;
+        padding: 14px 30px;
+        min-width: 300px;
+    }
+
+    /* Wider max-width for better spacing */
+    .program-detail-section.skynotes-bg .detail-buttons {
+        max-width: 950px;
+        gap: 18px;
+    }
+}
+
 /* Tablet Portrait - 768px and below */
 @media (max-width: 768px) {
     :root {
@@ -1137,11 +1194,30 @@ body {
         min-height: 50px;
     }
 
-    /* SKYNOTES Grid - 2 columns for tablet */
-    .skynotes-bg .detail-buttons {
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 700px;
-        gap: 12px;
+    /* SKYNOTES Grid - Keep 3 columns for tablet to maintain color grouping */
+    .program-detail-section.skynotes-bg .detail-buttons {
+        grid-template-columns: repeat(3, 1fr) !important;
+        max-width: 680px;
+        gap: 10px;
+        padding: 0 20px;
+    }
+
+    /* Smaller font for SKYNOTES buttons on Tablet */
+    .program-detail-section.skynotes-bg .detail-action-btn {
+        font-size: 0.7rem;
+        padding: 10px 12px;
+        min-width: auto;
+    }
+
+    /* Maintain row 4 positioning for white buttons on tablet */
+    .program-detail-section.skynotes-bg .detail-action-btn:nth-child(9) {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .program-detail-section.skynotes-bg .detail-action-btn:nth-child(10) {
+        grid-column: 2;
+        grid-row: 4;
     }
 }
 
@@ -1173,8 +1249,8 @@ body {
     }
 
     /* SKYNOTES Grid - Single column for mobile */
-    .skynotes-bg .detail-buttons {
-        grid-template-columns: 1fr;
+    .program-detail-section.skynotes-bg .detail-buttons {
+        grid-template-columns: 1fr !important;
         max-width: 100%;
         padding: 0 20px;
         gap: 12px;
@@ -1248,7 +1324,7 @@ body {
     }
 
     /* SKYNOTES buttons with extra padding on mobile */
-    .skynotes-bg .detail-buttons {
+    .program-detail-section.skynotes-bg .detail-buttons {
         padding: 0 15px;
         gap: 10px;
     }
