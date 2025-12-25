@@ -177,7 +177,7 @@ function loadProgramDetails() {
     }
 
     // Update page content
-    document.getElementById('pageTitle').textContent = `${program.title} - Dharmapatha Mahidara`;
+    document.getElementById('pageTitle').textContent = `${program.title} - Dharmapatha Mahidhara`;
     document.getElementById('programIcon').textContent = program.icon;
     document.getElementById('programTitle').textContent = program.title;
     document.getElementById('programSubtitle').textContent = program.subtitle;
