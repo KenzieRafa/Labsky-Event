@@ -188,12 +188,12 @@ body {
 }
 
 .hero-logo-second {
-    width: 1400px;
-    height: 1400px;
+    width: 1000px;
+    height: 1000px;
     object-fit: contain;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
     transition: var(--transition-smooth);
-    margin-left: 250px;
+    margin-right: 20px;
     margin-top: 250px;
 }
 
@@ -1118,9 +1118,9 @@ body {
     }
 
     .hero-logo-second {
-        width: 900px;
-        height: 900px;
-        margin-left: 170px;
+        width: 700px;
+        height: 700px;
+        margin-right: 265px;
         margin-top: 150px;
     }
 
@@ -1345,9 +1345,9 @@ body {
     }
 
     .hero-logo-second {
-        width: 530px;
-        height: 530px;
-        margin-left: 110px;
+        width: 400px;
+        height: 400px;
+        margin-right: 11px;
         margin-top: 0;
     }
     .new-card-title {
@@ -1380,13 +1380,14 @@ body {
 /* Extra Small Mobile - 375px and below */
 @media (max-width: 375px) {
     .hero-logo {
-        width: 120px;
-        height: 120px;
+        width: 350px;
+        height: 350px;
+        margin-left: 5px
     }
 
     .hero-logo-second {
-        width: 150px;
-        height: 150px;
+        width: 350px;
+        height:350px;
     }
 
     .hero-title {
