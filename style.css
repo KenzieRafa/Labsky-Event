@@ -1172,14 +1172,14 @@ body {
     .new-section-logo {
         width: 100%;
         transform: scale(1.8);
-        margin-top: 150px;
+        margin-top: 10px;
         margin-left: 34px;
         margin-bottom: 150px;
     }
 
     /* Cards section for Tablet */
     .new-section-cards-wrapper {
-              /* ← Jarak dari logo ke cards */
+        margin-top: -410px;     /* ← Jarak dari logo ke cards */
         padding: 0 40px;         /* ← Padding kiri-kanan */
         padding-bottom: 40px;
     }
