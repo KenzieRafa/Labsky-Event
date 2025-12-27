@@ -1373,12 +1373,12 @@ body {
         width: 100%;
         transform: scale(2.5);
         margin-left: 25px;
-        margin-top: 130px;
+        margin-top: 30px;
     }
 
     /* Fix cards wrapper */
     .new-section-cards-wrapper {
-        margin-top: -250px;
+        margin-top: -335px;
         padding: 0 20px;
         padding-bottom: 0px;
     }
@@ -1420,5 +1420,72 @@ body {
         min-height: 44px;
         width: auto;
         min-width: 280px;
+    }
+        /* Enlarge Program Kerja Kami logo */
+    .new-section-logo {
+        max-width: 100%;
+        width: 100%;
+        transform: scale(2.5);
+        margin-left: 25px;
+        margin-top: 5px;
+    }
+
+    /* Fix cards wrapper */
+    .new-section-cards-wrapper {
+        margin-top: -320px;
+        padding: 0 20px;
+        padding-bottom: 0px;
+    }
+}
+@media (max-width: 325px) {
+    .hero-logo {
+        width: 350px;
+        height: 350px;
+        margin-left: 5px
+    }
+
+    .hero-logo-second {
+        width: 350px;
+        height:350px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .program-card {
+        min-width: 240px;
+        height: 320px;
+    }
+
+    .new-card-title {
+        font-size: 1.2rem;
+    }
+
+    .detail-program-name {
+        font-size: clamp(2rem, 6vw, 2.8rem);
+    }
+
+    .detail-action-btn {
+        font-size: 0.75rem;
+        padding: 12px 18px;
+        min-height: 44px;
+        width: auto;
+        min-width: 280px;
+    }
+        /* Enlarge Program Kerja Kami logo */
+    .new-section-logo {
+        max-width: 100%;
+        width: 100%;
+        transform: scale(2.5);
+        margin-left: 25px;
+        margin-top: 0px;
+    }
+
+    /* Fix cards wrapper */
+    .new-section-cards-wrapper {
+        margin-top: -290px;
+        padding: 0 20px;
+        padding-bottom: 0px;
     }
 }
