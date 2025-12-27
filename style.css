@@ -1133,12 +1133,6 @@ body {
         padding: 0.5px 0;
     }
 
-    /* Running text ukuran setengah untuk mobile */
-    .text-item {
-        font-size: clamp(0.5rem, 1vw, 1rem);
-        padding: 0 25px;
-    }
-
     .program-wrapper {
         padding: 0 20px;
     }
@@ -1342,6 +1336,12 @@ body {
     /* Fix background attachment for mobile */
     .hero-section {
         background-attachment: scroll;
+    }
+
+    /* Running text ukuran setengah untuk mobile */
+    .text-item {
+        font-size: clamp(0.5rem, 1vw, 1rem);
+        padding: 0 25px;
     }
 
     /* Fix logo size and positioning */
