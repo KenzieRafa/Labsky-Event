@@ -1269,6 +1269,20 @@ body {
     .detail-buttons {
         justify-content: center;
     }
+    .new-section-logo {
+        max-width: 100%;
+        width: 100%;
+        transform: scale(2.5);
+        margin-left: 25px;
+        margin-top: 30px;
+    }
+
+    /* Fix cards wrapper */
+    .new-section-cards-wrapper {
+        margin-top: -335px;
+        padding: 0 20px;
+        padding-bottom: 0px;
+    }
 }
 
 /* Small Mobile - 480px and below */
@@ -1328,6 +1342,20 @@ body {
     .program-detail-section.skynotes-bg .detail-buttons {
         padding: 0 15px;
         gap: 10px;
+    }
+    .new-section-logo {
+        max-width: 100%;
+        width: 100%;
+        transform: scale(2.5);
+        margin-left: 25px;
+        margin-top: 30px;
+    }
+
+    /* Fix cards wrapper */
+    .new-section-cards-wrapper {
+        margin-top: -335px;
+        padding: 0 20px;
+        padding-bottom: 0px;
     }
 }
 
