@@ -1252,6 +1252,12 @@ body {
         gap: 12px;
     }
 
+    /* Reset grid positioning for all SKYNOTES buttons on mobile */
+    .program-detail-section.skynotes-bg .detail-action-btn {
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+
     .detail-action-btn {
         font-size: 0.85rem;
         padding: 14px 25px;
@@ -1337,6 +1343,13 @@ body {
     .program-detail-section.skynotes-bg .detail-buttons {
         padding: 0 15px;
         gap: 10px;
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Ensure all buttons stack vertically */
+    .program-detail-section.skynotes-bg .detail-action-btn {
+        grid-column: auto !important;
+        grid-row: auto !important;
     }
     .new-section-logo {
         max-width: 100%;
